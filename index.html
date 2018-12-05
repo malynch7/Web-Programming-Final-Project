@@ -2,8 +2,68 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .container .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .container .btn:hover {
+        background-color: black;
+    }
+    </style>
 </head>
 <body>
+
+<center><h1>Cruise and Park</h1></center>
+
+<center><h2>Select a Cruise Package</h2></center>
+
+<center><table>
+    <tr>
+        <td>
+<div class="container">
+    <img src="bahamas.jpg" alt="Snow" style="width:100%">
+    <button class="btn">1</button>
+  </div>
+  </td>
+  <td>
+  <div class="container">
+    <img src="caribbean.jpg" alt="Snow" style="width:100%">
+    <button class="btn">2</button>
+  </div>
+</td>
+<td>
+  <div class="container">
+    <img src="alaska.jpg" alt="Snow" style="width:100%">
+    <button class="btn">3</button>
+  </div>
+</td>
+</tr>
+</table></center>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
