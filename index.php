@@ -4,64 +4,58 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    .container {
-        position: relative;
-        width: 100%;
-        max-width: 400px;
-    }
-    
-    .container img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .container .btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: #555;
-        color: white;
-        font-size: 16px;
-        padding: 12px 24px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
-    }
-    
-    .container .btn:hover {
-        background-color: black;
-    }
+div {
+background-color: blue;
+color: white;
+}
     </style>
 </head>
-<body>
 
-<center><h1>Cruise and Park</h1></center>
+<body>
+<center><div>
+<h1>Cruise and Park</h1>
+</div></center>
 
 <center><h2>Select a Cruise Package</h2></center>
 
 <center><table>
-    <tr>
-        <td>
-<div class="container">
-    <img src="bahamas.jpg" alt="Snow" style="width:100%">
-    <button class="btn">1</button>
-  </div>
-  </td>
-  <td>
-  <div class="container">
-    <img src="caribbean.jpg" alt="Snow" style="width:100%">
-    <button class="btn">2</button>
-  </div>
+<tr>
+<td>
+<h4>Bahamas</h4>
 </td>
 <td>
-  <div class="container">
-    <img src="alaska.jpg" alt="Snow" style="width:100%">
-    <button class="btn">3</button>
-  </div>
+<h4>Carribean</h4>
 </td>
+<td>
+<h4>Alaska</h4>
+</td>
+</tr>
+    <tr>
+        <td>
+        <img src="bahamas.jpg" alt="Bahamas">
+  </td>
+  <td>
+  <img src="caribbean.jpg" alt="Caribbean">
+</td>
+<td>
+<img src="alaska.jpg" alt="Alaska">
+</td>
+</tr>
+<tr>
+<form action="/index.php">
+<center><td>
+  <input type="radio" name="gender" value="male"> <br>
+  </td></center>
+  <center><td>
+  <input type="radio" name="gender" value="female"> <br>
+  </td></center>
+  <center><td>
+  <input type="radio" name="gender" value="other"> <br>  
+  </td></center>
+ <center> <td>
+  <input type="submit" value="Add To Cart">
+  </td></center>
+</form>
 </tr>
 </table></center>
 
