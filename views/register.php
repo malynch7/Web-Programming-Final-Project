@@ -2,7 +2,7 @@
 <html>
     <head>
             <title>Register </title>
-             <link rel="stylesheet" type="text/css" href="LoginStyle.css">
+             <link rel="stylesheet" type="text/css" href="/views/LoginStyle.css">
     </head>
     <body>
 
