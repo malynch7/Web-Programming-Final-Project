@@ -1,6 +1,6 @@
 <?php
 
-class Booking extends Controller{
+class Menu extends Controller{
 
     private $model;
 

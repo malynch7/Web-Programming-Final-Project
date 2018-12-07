@@ -10,6 +10,7 @@ class View{
     }
 
     public function output(){
+
        require_once($this->model->template);
     }
 }
