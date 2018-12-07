@@ -140,7 +140,7 @@ echo "the username is ".$uname;
             ?>
                     <table id="mainframe">
              <div class="CorrectLogin">
-                <img src="PhotoIcon.png" class="IconMain">
+                <img src="images/PhotoIcon.png" class="IconMain">
                 <h1>  Login </h1>
                 <form method="post">
                     <p>Email: </p>

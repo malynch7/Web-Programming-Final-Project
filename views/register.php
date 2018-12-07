@@ -7,7 +7,7 @@
     <body>
 
          <div class="CorrectLogin">
-                <img src="PhotoIcon.png" class="IconMain">
+                <img src="images/PhotoIcon.png" class="IconMain">
                 <h1>Register</h1>
                  <form action="MainRegister.php" method="post">
                 <p>First Name: </p>
