@@ -6,8 +6,11 @@ require_once 'views/View.php';
 
 $model = new Model();
 
+if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    $controller->logout();
+}
 // select controller
-if(session_id() == '' || !isset($_SESSION)) {
+if(!isset($_COOKIE['email'])) {
     if (isset($_GET['controller']) && !empty($_GET['controller'])) {
         switch($_GET['controller']){
             case 'login':
@@ -20,18 +23,19 @@ if(session_id() == '' || !isset($_SESSION)) {
                 break;
             case 'booking':
                 require_once 'controllers/Menu.php';
-
+                $controller = new Menu($model);
                 break;
         }
     }else{
         $controller = new Controller($model);
     }
-}else if(!isset($_SESSION['bookingStage'])){
+
+}else if(!isset($_COOKIE['bookingStage'])){
     require_once 'controllers/Menu.php';
     $controller = new Menu($model);
 }else{
     $controller = new Booking($model);
-    switch($_SESSION['bookingStage']){
+    switch($_COOKIE['bookingStage']){
         case 0:
             $model ->template = 'views/inventory.php';
             break;
@@ -48,13 +52,8 @@ if(session_id() == '' || !isset($_SESSION)) {
             $model ->template = 'views/viewCart.php';
             break;
     }
-
 }
 
 $view = new View($controller, $model);
-
-if (isset($_GET['action']) && !empty($_GET['action'])) {
-    $controller->{$_GET['action']}();
-}
 
 echo $view->output() ;

@@ -7,6 +7,6 @@ class Menu extends Controller{
     public function __construct($model) {
         parent::__construct($model);
         $this->model = $model;
-        $this->model->template = 'views/Menu.php';
+        $this->model->template = 'views/menu.php';
     }
 }
