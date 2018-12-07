@@ -52,29 +52,29 @@
         </ul>
     </div></center>
 
-<center><h2>Select a Destination</h2></center>
+<center><h2>Upgrade Your Room</h2></center>
 
 <center><table>
         <tr>
             <td>
-                <h4>Bahamas</h4>
+                <h4>Standard Room</h4>
             </td>
             <td>
-                <h4>Carribean</h4>
+                <h4>Balcony Room</h4>
             </td>
             <td>
-                <h4>Alaska</h4>
+                <h4>Suite</h4>
             </td>
         </tr>
         <tr>
             <td>
-                <img src="views/images/bahamas.jpg" alt="Bahamas">
+                <img src="views/images/standardroom.jpg" alt="Bahamas">
             </td>
             <td>
-                <img src="views/images/caribbean.jpg" alt="Caribbean">
+                <img src="views/images/balconyroom.jpg" alt="Caribbean">
             </td>
             <td>
-                <img src="views/images/alaska.jpg" alt="Alaska">
+                <img src="views/images/suite.jpg" alt="Alaska">
             </td>
         </tr>
         <tr>
@@ -98,29 +98,20 @@
                 <ul>
                     <li>1 Person</li>
                     <li>1 Standard Room</li>
-                    <li>Unlimited Food & Drinks</li>
-                    <li>4 days and 3 nights</li>
-                    <li>Port Miami, Flordia | Key West, Flordia | Nassau, Bahamas</li>
-                    <li>$399.99</li>
+                    <li>No additional cost</li>
                 </ul>
             </td>
             <td>
                 <ul>
-                    <li>1 Person</li>
-                    <li>1 Standard Room</li>
-                    <li>Unlimited Food & Drinks</li>
-                    <li>6 days and 5 nights</li>
-                    <li>Port Canaveral, Florida | Key West, Florida | Nassau, Bahamas | Cozumel, Mexico | Puerto Costa Maya, Mexico</li>
-                    <li>$599.99</li>
+                <li>1 Person</li>
+                    <li>1 Balcony Room</li>
+                    <li>Additional #199.99</li>
                 </ul>
             </td>
             <td>
-                <li>1 Person</li>
-                <li>1 Standard Room</li>
-                <li>Unlimited Food & Drinks</li>
-                <li>10 days and 9 nights</li>
-                <li>Seward, Alaska | Juneau, Alaska | Skagway, Alaska | Icy Strait, Point Alaska | Vancouver, British Columbia | Ketchikan, Alaska</li>
-                <li>$999.99</li>
+            <li>1 Person</li>
+                    <li>1 Suite</li>
+                    <li>Additional $399.99</li>
                 </ul>
             </td>
 
