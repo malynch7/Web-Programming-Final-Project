@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>View Your Cart</title>
-    <link rel="stylesheet" type="text/css" href="/css/Style.css">
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
     <style>
 
 .container
