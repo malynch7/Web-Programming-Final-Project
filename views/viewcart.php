@@ -1,9 +1,10 @@
 <?php
     $Total_amount=0;
     $DestinationMain=0;
+    $Num_ofR =0;
     $RoomMain=0;
     $ParkinglotMain=0;
-    $ParkingSelec=$_COOKIE["Parking_Bool"];
+    $ParkingSelec=$_COOKIE["Parking_Bool"] + 0;
     $ExEmail='garavsoni12';
     $largestvalue =0;
     $servername = "localhost";
@@ -12,20 +13,25 @@
     $dbname = "gsoni1";
     $Num_of_Rooms=0;
     $ParkingSelec =$ParkingSelec+0;
+    if(!$ParkingSelec){
+        $ParkinglotMain = 3;
+    }else{
+        $ParkinglotMain = $_COOKIE["Parking_Lot"] + $ParkinglotMain;
+    }
 
 $DestinationMain = $_COOKIE["Destination_Selection"] + $DestinationMain;
 $RoomMain = $_COOKIE["Room_Selection"] + $RoomMain;
-$ParkinglotMain = $_COOKIE["Parking_Lot"] + $ParkinglotMain;
+$Num_ofR =   $Num_ofR + $_COOKIE["numberOfRooms"];
 
 
 
 $Des_Cr = array(399.99, 599.99, 999.99);
 $Room_Sel = array(0, 199.99, 399.99);
-$Lot_Sel = array(25, 35, 60);
-$Total_amount = ($Des_Cr[$_COOKIE["Destination_Selection"]] +  $Room_Sel[$_COOKIE["Room_Selection"]]) * $_COOKIE["numberOfRooms"] + $Lot_Sel[$_COOKIE["Parking_Lot"]];
+$Lot_Sel = array(25, 35, 60,0);
+$Total_amount = ($Des_Cr[$DestinationMain] +  $Room_Sel[$RoomMain]) * $Num_ofR  + $Lot_Sel[$ParkinglotMain];
 
 
-
+/*
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -82,6 +88,7 @@ if ($conn->query($sql2) === TRUE) {
 
 
 $conn->close();
+*/
 
 
 ?>
