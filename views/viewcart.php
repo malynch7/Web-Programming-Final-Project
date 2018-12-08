@@ -71,8 +71,6 @@ $sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number
 $sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,parking,parking_lot,total_price) VALUES($largestvalue,$DestinationMain,$RoomMain,$ConvertToInt,$ParkingSelec,$ParkinglotMain,$Total_amount)";
 
 
-
-
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
@@ -84,6 +82,8 @@ $sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,
 
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
+    setcookie("bookingStage",1,time()+(2*60*60),'/~malynch7/finalProject');
+    header("Location:index.php");
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
