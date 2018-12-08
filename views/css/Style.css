@@ -1,3 +1,9 @@
+body{
+  background-size:cover;
+  background-size: 100%;
+  background-image: url('../images/canberra.jpg');
+}
+
 div {
 background-color: blue;
 color: white;
