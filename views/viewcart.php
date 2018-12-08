@@ -14,8 +14,8 @@
     $ParkingSelec =$ParkingSelec+0;
 
 $DestinationMain = $_COOKIE["Destination_Selection"] + $DestinationMain;
-$RoomMain = $Des_Cr[$_COOKIE["Room_Selection"]] + $RoomMain;
-$ParkinglotMain = $Des_Cr[$_COOKIE["Parking_Lot"]] + $ParkinglotMain;
+$RoomMain = $_COOKIE["Room_Selection"] + $RoomMain;
+$ParkinglotMain = $_COOKIE["Parking_Lot"] + $ParkinglotMain;
 
 
 
