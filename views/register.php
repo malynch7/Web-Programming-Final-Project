@@ -2,12 +2,12 @@
 <html>
     <head>
             <title>Register </title>
-             <link rel="stylesheet" type="text/css" href="/views/LoginStyle.css">
+             <link rel="stylesheet" type="text/css" href="views/css/LoginStyle.css">
     </head>
     <body>
 
          <div class="CorrectLogin">
-                <img src="images/PhotoIcon.png" class="IconMain">
+                <img src="views/images/PhotoIcon.png" class="IconMain">
                 <h1>Register</h1>
                  <form action="MainRegister.php" method="post">
                 <p>First Name: </p>

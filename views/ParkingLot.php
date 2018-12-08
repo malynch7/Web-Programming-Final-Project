@@ -1,10 +1,12 @@
 <?php
-    echo $_POST['parking'];
+    echo $_POST['Lot'];
+    echo $_POST['Lot'];
     $Lot_Val=0;
-    if($_POST['parking']){
-        $Lot_Val = $_POST['parking'];
+    if(isset($_POST['Lot'])){
+        $Lot_Val = $_POST['Lot'];
         setcookie("Parking_Lot",$Lot_Val, time() + (2*60*60));
-        $_Cookie['bookingStage']=4;
+        setcookie("bookingStage", 4, time() + (2*60*60), '/~mlynch7/finalProject');
+        header("Location:index.php");
     }
     echo "Parking lot".$_Cookie["Parking_Lot"];
 ?>
@@ -58,15 +60,15 @@
 </td>
 </tr>
 <tr>
-<form action="/index.php">
+<form method="post">
 <center><td>
-  <input type="radio" name="Lot" value="male"> <br>
+  <input type="radio" name="Lot" value="0"> <br>
   </td></center>
   <center><td>
-  <input type="radio" name="Lot" value="female"> <br>
+  <input type="radio" name="Lot" value="1"> <br>
   </td></center>
   <center><td>
-  <input type="radio" name="Lot" value="other"> <br>
+  <input type="radio" name="Lot" value="2"> <br>
   </td></center>
  <center> <td>
   <input type="submit" value="Add To Cart">

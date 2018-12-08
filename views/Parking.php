@@ -7,7 +7,12 @@
     if($_POST['parking']){
         $ParkVal = $_POST['parking'];
         setcookie("Parking_Bool",$ParkVal, time() + (2*60*60));
-        $_Cookie['bookingStage']=3;
+
+        if($ParkVal == '1'){
+            setcookie("bookingStage", 3, time() + (2*60*60), '/~mlynch7/finalProject');
+        }else{
+            setcookie("bookingStage", 4, time() + (2*60*60), '/~mlynch7/finalProject');
+        }
         header("Location:index.php");
     }
 ?>
@@ -19,7 +24,7 @@
 <title>Cruise and Book</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/Style.css">
+<link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
 <body>
@@ -33,9 +38,10 @@
 </ul>
 </div></center>
 <h2>Do you want park?</h2>
-<form action="">
+<form method="post">
   <input type="radio" name="parking" value="1"> Yes<br>
-  <input type="radio" name="parking" value="female"> No<br>
+  <input type="radio" name="parking" value="0"> No<br>
+    <input type="submit" value="Add To Cart">
 </form>
 
 

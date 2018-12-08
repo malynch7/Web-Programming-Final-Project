@@ -45,16 +45,16 @@ if(!isset($_COOKIE['email'])) {
             $model->template = 'views/inventory.php';
             break;
         case 1:
-            $model->template = 'views/rooms.php';
+            $model->template = 'views/Room.php';
             break;
         case 2:
-            $model->template = 'views/parking.php';
+            $model->template = 'views/Parking.php';
             break;
         case 3:
-            $model->template = 'views/lotSelection.php';
+            $model->template = 'views/ParkingLot.php';
             break;
         case 4:
-            $model->template = 'views/viewCart.php';
+            $model->template = 'views/viewcart.php';
             break;
         case 5:
             $model->template = 'views/congrats.php';
