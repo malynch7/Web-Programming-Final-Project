@@ -67,17 +67,17 @@ if ($_POST['room']) {
             <form method="post">
                 <center>
                     <td>
-                        <input type="radio" name="room" value="base"> <br>
+                        <input type="radio" name="room" value="0"> <br>
                     </td>
                 </center>
                 <center>
                     <td>
-                        <input type="radio" name="room" value="standard"> <br>
+                        <input type="radio" name="room" value="1"> <br>
                     </td>
                 </center>
                 <center>
                     <td>
-                        <input type="radio" name="room" value="luxury"> <br>
+                        <input type="radio" name="room" value="2"> <br>
                     </td>
                 </center>
                 <center>

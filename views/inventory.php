@@ -65,17 +65,17 @@ if ($_POST['One']) {
             <tr>
                 <center>
                     <td>
-                        <input type="radio" name="One" value="one"> <br>
+                        <input type="radio" name="One" value="0"> <br>
                     </td>
                 </center>
                 <center>
                     <td>
-                        <input type="radio" name="One" value="two"> <br>
+                        <input type="radio" name="One" value="1"> <br>
                     </td>
                 </center>
                 <center>
                     <td>
-                        <input type="radio" name="One" value="three"> <br>
+                        <input type="radio" name="One" value="2"> <br>
                     </td>
                 </center>
             </tr>
