@@ -78,15 +78,15 @@ if ($conn->query($sql) === TRUE) {
 
 
 $sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,'$EmailMain')";
-
+    setcookie("bookingStage",5,time()+(2*60*60),'/~mlynch7/finalProject');
+    header("Location:index.php");
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
 
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
-    setcookie("bookingStage",5,time()+(2*60*60),'/~malynch7/finalProject');
-    header("Location:index.php");
+
 $conn->close();
 }
 
