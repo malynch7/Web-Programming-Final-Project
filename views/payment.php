@@ -1,4 +1,6 @@
 <?php
+       $ExEmail='garavsoni12';
+       $largestvalue =0;
        $servername = "localhost";
        $username = "gsoni1";
        $password = "gsoni1";
@@ -13,6 +15,7 @@ if ($conn->connect_error) {
 }
 
 
+
     $sql = "SELECT * FROM purchase";
 
 
@@ -24,11 +27,18 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<br> purchase_number: ". $row["purchase_number"]. " - destination_code: ". $row["destination_code"]. "room_tier" . $row["room_tier"] . " number_of_rooms: ". $row["number_of_rooms"]." total_occupants". $row["total_occupants"]." parking".$row["parking"]." parking_lot".$row["parking_lot"]."<br>";
+        $largestvalue=$row["purchase_number"];
+
     }
 } else {
     echo "0 results";
 }
-$sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,total_occupants,parking,parking_lot) VALUES(2,2,2,1,1,1,1)";
+echo "the largestvalue is "+$largestvalue;
+$largestvalue=$largestvalue+1;
+
+$sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,total_occupants,parking,parking_lot) VALUES($largestvalue,2,2,1,1,1,1)";
+
+
 
 
 if ($conn->query($sql) === TRUE) {
@@ -38,7 +48,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 
-$sql2 = "INSERT INTO user_purchase (purchase_number,email) Values(2,'anotherexample')";
+$sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,'$ExEmail')";
 
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
