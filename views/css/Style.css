@@ -62,6 +62,15 @@ body {
     text-align: center;
 }
 
+.card table{
+    width: 80%;
+    border: solid 2px black;
+}
+
+.card td{
+    padding: 5px;
+}
+
 .jumbotron {
     width: 80%;
     margin: auto;

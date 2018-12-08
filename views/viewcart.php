@@ -2,7 +2,7 @@
 
     $Total_amount=0;
     $DestinationMain=0;
-    $Num_ofR =0;
+    $Num_of_Rooms =0;
     $RoomMain=0;
     $ParkinglotMain=0;
     $ParkingSelec=$_COOKIE["Parking_Bool"] + 0;
@@ -12,7 +12,6 @@
     $username = "gsoni1";
     $password = "gsoni1";
     $dbname = "gsoni1";
-    $Num_of_Rooms=0;
     $ParkingSelec =$ParkingSelec+0;
 
     if(!$ParkingSelec){
@@ -23,14 +22,14 @@
 
 $DestinationMain = $_COOKIE["Destination_Selection"] + $DestinationMain;
 $RoomMain = $_COOKIE["Room_Selection"] + $RoomMain;
-$Num_ofR =   $Num_ofR + $_COOKIE["numberOfRooms"];
+$Num_of_Rooms =   $Num_of_Rooms + $_COOKIE["numberOfRooms"];
 
 
 
 $Des_Cr = array(399.99, 599.99, 999.99);
 $Room_Sel = array(0, 199.99, 399.99);
 $Lot_Sel = array(25, 35, 60,0);
-$Total_amount = ($Des_Cr[$DestinationMain] +  $Room_Sel[$RoomMain]) * $Num_ofR  + $Lot_Sel[$ParkinglotMain];
+$Total_amount = ($Des_Cr[$DestinationMain] +  $Room_Sel[$RoomMain]) * $Num_of_Rooms  + $Lot_Sel[$ParkinglotMain];
 
 
 if(isset($_POST["submit"])){
@@ -82,292 +81,130 @@ $sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,
 
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
-    setcookie("bookingStage",1,time()+(2*60*60),'/~malynch7/finalProject');
-    header("Location:index.php");
+
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
-
+    setcookie("bookingStage",5,time()+(2*60*60),'/~malynch7/finalProject');
+    header("Location:index.php");
 $conn->close();
 }
 
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>View Your Cart</title>
-    <link rel="stylesheet" type="text/css" href="css/Style.css">
-    <style>
-
-.container
-    display: flex
-    align-items: center
-    justify-content: center
-    height: 100vh
-    flex-direction: column
-
-*
-    box-sizing: border-box
-
-html
-    background-color: #171A3D
-    font-family: 'Lato', sans-serif
-
-.card
-    margin-top: 30px
-    margin-bottom: 30px
-    width: 520px
-    height: 400px
-    .row
-        height: 20%
-        width: 100%
-        border-bottom: 1.2px solid #292C58
-        &:last-child
-            border: none
-    .paypal
-        border-top-left-radius: 10px
-        border-top-right-radius: 10px
-    .details
-        border-bottom-left-radius: 10px
-        border-bottom-right-radius: 10px
-    .credit
-        background-color: #1E2148
-    .cardholder, .number, .details
-        background-color: #242852
-
-.credit
-    .left, .right
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-    .left
-        float: left
-        margin-left: 50px
-        label
-            margin-left: 10px
-            font-size: 1rem
-            cursor: pointer
-            font-weight: 700
-            letter-spacing: 0.5px
-            color: #fff
-        input[type=radio]
-            visibility: hidden
-        .radio
-            position: absolute
-            top: -2px
-            left: -20px
-            border: 3px solid #414365
-            width: 25px
-            height: 25px
-            border-radius: 50%
-            background-color: #292B52
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-            &::before
-                position: absolute
-                content: ''
-                border-radius: 50%
-                top: 5px
-                left: 5px
-                width: 9px
-                height: 9px
-                background-color: transparent
-                transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-    .right
-        float: right
-        margin-right: 30px
-        img
-            width: 42px
-            height: 30px
-            margin-left: 10px
-
-input[type=radio]:checked ~ .radio
-    border: 3px solid #90E1E3
-    background-color: #18C2C0
-    &::before
-        background-color: #fff
-
-.cardholder, .number
-    .info
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-        margin-left: 40px
-        label
-            display: inline-block
-            letter-spacing: 0.5px
-            color: #8F92C3
-            width: 100px
-        input
-            display: inline-block
-            max-width: 300px
-            width: 300px
-            background-color: transparent
-            font-family: 'Source Code Pro'
-            border: none
-            outline: none
-            margin-left: 50px
-            color: white
-            &::placeholder
-                font-family: 'Source Code Pro'
-                color: #444880
-
-#cardnumber, #cardnumber::placeholder
-    letter-spacing: 2px
-
-.details
-    .left, .right
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-    .left
-        float: left
-        padding-left: 40px
-        width: 50%
-        label
-            letter-spacing: 0.5px
-            color: #8F92C3
-            width: 100px
-            margin-right: 20px
-        select
-            font-family: 'Source Code Pro'
-            cursor: pointer
-            appearance: none
-            background: transparent
-            border: none
-            outline: none
-            color: #444880
-        span
-            font-family: 'Source Code Pro'
-            color: #444880
-            margin: 0 2px
-    .right
-        float: right
-        width: 50%
-        label
-            margin-right: 20px
-            color: #8F92C3
-        input
-            text-align: center
-            width: 50px
-            font-family: 'Source Code Pro'
-            cursor: pointer
-            background: transparent
-            border: none
-            outline: none
-            color: #fff
-            &::placeholder
-                font-family: 'Source Code Pro'
-                color: #444880
-        span
-            text-align: center
-            display: inline-block
-            font-family: 'Source Code Pro'
-            cursor: pointer
-            margin-left: 50px
-            color: #18C2C0
-            width: 24px
-            height: 24px
-            border: 2px solid #18C2C0
-            border-radius: 50%
-
-.button button
-    font-size: 1.2rem
-    font-weight: 400
-    letter-spacing: 1px
-    width: 520px
-    background-color: #18C2C0
-    border: none
-    color: #fff
-    padding: 18px
-    border-radius: 5px
-    outline: none
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-    &:hover
-        background-color: #15aeac
-    &:active
-        background-color: #139b99
-    i
-        font-size: 1.2rem
-        margin-right: 5px
-
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
 <body>
-<center><div class="divtop">
+<center>
+    <div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a href="youtube.html">YouTube Video</a></li>
-            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
-            <li class="linav"><a href="#news">Logout</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
+            <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
-    </div></center>
-<form method="post">
-<center><h2>Your Cart</h2></center>
-<center><table>
-        <tr>
-            <p>Destination:<?php switch($_COOKIE['Destination_Selection']){
-                case 0:
-                    echo "Bahamas";
-                    break;
-                case 1:
-                    echo 'Carribean';
-                    break;
-                case 2:
-                    echo 'Alaska';
-                    }
+    </div>
+</center>
+<div class="card" style="width: 28rem; margin-top: 5%">
+    <div class="card-body">
+        <h3 align="center">Shopping Cart</h3>
+        <hr><br>
+        <table align="center" border="1">
+            <tr>
+                <th align="center">Category</th>
+                <th align="center">Selection</th>
+                <th align="center">Price</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Destination</p>
+                </td>
+                <td><p><?php echo $Num_of_Rooms;
+                        switch($DestinationMain){
+                            case 0:
+                                echo " Bahamas";
+                                break;
+                            case 1:
+                                echo ' Carribean';
+                                break;
+                            case 2:
+                                echo ' Alaska';
+                        } ?></p>
+                </td>
+                <td>
+                    <p><?php echo '$' . ($Des_Cr[$DestinationMain] * $Num_of_Rooms); ?></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Room</p>
+                </td>
+                <td><p><?php echo $Num_of_Rooms;
+                        switch($RoomMain){
+                            case 0:
+                                echo " Basic Room";
+                                break;
+                            case 1:
+                                echo ' Standard Room';
+                                break;
+                            case 2:
+                                echo ' Luxury Room';
+                        } ?></p>
+                </td>
+                <td>
+                    <p><?php echo '$' . ($Room_Sel[$RoomMain] * $Num_of_Rooms); ?></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Parking</p>
+                </td>
+                <td><p><?php switch($ParkinglotMain){
+                            case 0:
+                                echo 'Red Lot';
+                                break;
+                            case 1:
+                                echo 'Blue Lot';
+                                break;
+                            case 2:
+                                echo 'VIP Lot';
+                        } ?></p>
+                </td>
+                <td>
+                    <p><?php echo '$' . $Lot_Sel[$ParkinglotMain]; ?></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Total</p>
+                </td>
+                <td>
+                    <p>Total</p>
+                </td>
+                <td>
+                    <p><?php echo '$' . $Total_amount; ?></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 
-            ?></p>
-        </tr>
-        <tr>
-            <p>Room:
-                <?php
-                switch($_COOKIE['Room_Selection']){
-                case 0:
-                    echo "Basic";
-                    break;
-                case 1:
-                    echo 'Standard';
-                    break;
-                case 2:
-                    echo 'Luxury';
-                    }
-
-
-            ?>
-
-
-
-            </p>
-        </tr>
-        <tr>
-            <p>Parking: </p>
-            <?php switch($_COOKIE['Parking_Bool']){
-                case 0:
-                    echo 'No';
-                case 1:
-                    echo 'Yes';
-                    }
-
-            ?>
-        </tr>
-        <tr>
-            <p>Subtotal=
-                <?php
-                    echo $Total_amount;
-                ?>
-            </p>
-        </tr>
-    </table></center>
+<table>
 
 <tr>
     <center>
     <div class="container">
+        <form method="post">
     <div class="card__container">
         <div class="card">
             <div class="row credit">
@@ -465,4 +302,15 @@ input[type=radio]:checked ~ .radio
 <hr>
 <center><p>© Copyright 2018 Cruise and Park</p></center>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
 <html>
