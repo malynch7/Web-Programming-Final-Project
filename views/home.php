@@ -6,11 +6,18 @@
     <title>Cruise and Park</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
 <body>
+<center><div>
+        <h1>Cruise and Park</h1>
+        <ul class="ulnav">
+            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
+        </ul>
+    </div></center>
 <br>
-<h1 align="center">Cruise and Park</h1>
 <br>
 <p align="center"><a class="btn btn-primary" href="index.php?controller=login" role="button">Log In</a></p>
 <br>
