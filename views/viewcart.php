@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>View Your Cart</title>
-    
+
     <style>
 
         .divtop {
@@ -47,7 +47,7 @@
 
 *
     box-sizing: border-box
-    
+
 html
     background-color: #171A3D
     font-family: 'Lato', sans-serif
@@ -73,7 +73,7 @@ html
         background-color: #1E2148
     .cardholder, .number, .details
         background-color: #242852
-        
+
 .credit
     .left, .right
         position: relative
@@ -124,7 +124,7 @@ input[type=radio]:checked ~ .radio
     background-color: #18C2C0
     &::before
         background-color: #fff
-    
+
 .cardholder, .number
     .info
         position: relative
@@ -149,7 +149,7 @@ input[type=radio]:checked ~ .radio
             &::placeholder
                 font-family: 'Source Code Pro'
                 color: #444880
-            
+
 #cardnumber, #cardnumber::placeholder
     letter-spacing: 2px
 
@@ -267,6 +267,7 @@ input[type=radio]:checked ~ .radio
     </table></center>
 
 <tr>
+    <center>
     <div class="container">
     <div class="card__container">
         <div class="card">
@@ -352,6 +353,7 @@ input[type=radio]:checked ~ .radio
         <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
     </div>
 </div>
+</center>
 </tr>
 </table></center>
 
