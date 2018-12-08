@@ -3,7 +3,6 @@ body{
     padding: 0;
     background-size:cover;
     background-size: 100%;
-    font-family:  "Courier New";
     background-image: url('../images/canberra.jpg');
 }
 #mainframe{
@@ -37,6 +36,7 @@ li a:hover:not(.active) {
 }
 
 .CorrectLogin{
+    font-family:  "Courier New";
     padding: 5px;
     width: 380px;
     height: 570px;
@@ -56,7 +56,7 @@ li a:hover:not(.active) {
     top: -50px;
     left: calc(50%,-50px);
 }
-h1{
+.CorrectLogin h1{
     color:white;
     margin: 0;
     padding: 0 0 20px;
@@ -88,7 +88,7 @@ h1{
     border:none;
     outline:none;
     height:40px;
-    background:grey;
+    background: #007bff;
     color:#fff;
     font-size:18px;
 }
@@ -97,7 +97,7 @@ h1{
     border:none;
     outline:none;
     height:40px;
-    background:grey;
+    background: #007bff;
     color:#fff;
     font-size:18px;
 }
@@ -111,7 +111,7 @@ a.color {
     color: white;
 }
 a.register{
-    color:white;
+    color: #007bff;
 }
 .ViewLogo{
     width: 90px;

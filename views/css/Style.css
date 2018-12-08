@@ -5,7 +5,7 @@ body .terminal{
 }
 
 .divtop {
-background-color: blue;
+background-color: #007bff;
 color: white;
 }
 
@@ -47,4 +47,12 @@ body {
   background-size:cover;
   background-size: 100%;
   background-image: url('../images/canberra.jpg');
+}
+
+.card{
+    margin: auto;
+}
+
+.card .btn-primary{
+    width: 80%;
 }

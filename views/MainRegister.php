@@ -1,19 +1,19 @@
 <?php
 
-     $RegFirstName  = $_REQUEST['RegFirstName'];
-     $RegLastName   = $_REQUEST['RegLastName'];
-     $RegEmail      = $_REQUEST['RegEmail'];
-     $RegPassword   = $_REQUEST['RegPassword'];
-     $ReRegPassword = $_REQUEST['ReRegPassword'];
-     if($RegPassword == $ReRegPassword){
-        echo "works well";
-     }else{
-        echo "does not work well";
-     }
-     echo $RegFirstName;
-     echo $RegLastName;
-     echo  $RegDOB;
-     echo  $RegEmail;
+$RegFirstName = $_REQUEST['RegFirstName'];
+$RegLastName = $_REQUEST['RegLastName'];
+$RegEmail = $_REQUEST['RegEmail'];
+$RegPassword = $_REQUEST['RegPassword'];
+$ReRegPassword = $_REQUEST['ReRegPassword'];
+if ($RegPassword == $ReRegPassword) {
+    echo "works well";
+} else {
+    echo "does not work well";
+}
+echo $RegFirstName;
+echo $RegLastName;
+echo $RegDOB;
+echo $RegEmail;
 $servername = "localhost";
 $username = "gsoni1";
 $password = "gsoni1";
@@ -23,7 +23,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}else{
+} else {
     echo 'successfully connected';
 }
 $sql = "SELECT email, password, first_name, last_name FROM user";
@@ -33,8 +33,8 @@ if (!$result) {
 }
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> email: ".$row["email"]." - password: ".$row["password"]."first name" . $row["first_name"]." last name: ". $row["last_name"]."<br>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<br> email: " . $row["email"] . " - password: " . $row["password"] . "first name" . $row["first_name"] . " last name: " . $row["last_name"] . "<br>";
     }
 } else {
     echo "0 results";
