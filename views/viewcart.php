@@ -1,11 +1,12 @@
 <?php
+
     $Total_amount=0;
     $DestinationMain=0;
     $Num_ofR =0;
     $RoomMain=0;
     $ParkinglotMain=0;
     $ParkingSelec=$_COOKIE["Parking_Bool"] + 0;
-    $ExEmail='garavsoni12';
+    $EmailMain=$_COOKIE["email"];
     $largestvalue =0;
     $servername = "localhost";
     $username = "gsoni1";
@@ -13,6 +14,7 @@
     $dbname = "gsoni1";
     $Num_of_Rooms=0;
     $ParkingSelec =$ParkingSelec+0;
+
     if(!$ParkingSelec){
         $ParkinglotMain = 3;
     }else{
@@ -31,7 +33,7 @@ $Lot_Sel = array(25, 35, 60,0);
 $Total_amount = ($Des_Cr[$DestinationMain] +  $Room_Sel[$RoomMain]) * $Num_ofR  + $Lot_Sel[$ParkinglotMain];
 
 
-/*
+if(isset($_POST["submit"])){
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -62,11 +64,11 @@ if ($result->num_rows > 0) {
 }
 echo "the largestvalue is "+$largestvalue;
 $largestvalue=$largestvalue+1;
-
-
-
-
-$sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,parking,parking_lot,total_price) VALUES($largestvalue,'$DestinationMain','$RoomMain','$_COOKIE["numberOfRooms"]','$ParkingSelec','$Lot_Sel','$Total_amount')";
+$ConvertToInt=$_COOKIE["numberOfRooms"]+0;
+/*
+$sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,parking,parking_lot,total_price) VALUES($largestvalue,'$DestinationMain','$RoomMain','$ConvertToInt','$ParkingSelec','$Lot_Sel','$Total_amount')";
+*/
+$sql = "INSERT INTO purchase(purchase_number, destination_code,room_tier, number_of_rooms,parking,parking_lot,total_price) VALUES($largestvalue,$DestinationMain,$RoomMain,$ConvertToInt,$ParkingSelec,$ParkinglotMain,$Total_amount)";
 
 
 
@@ -78,7 +80,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 
-$sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,'$ExEmail')";
+$sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,'$EmailMain')";
 
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
@@ -86,9 +88,8 @@ if ($conn->query($sql2) === TRUE) {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
 
-
 $conn->close();
-*/
+}
 
 
 ?>
@@ -305,30 +306,40 @@ input[type=radio]:checked ~ .radio
             <li class="linav"><a href="#news">Logout</a></li>
         </ul>
     </div></center>
-
+<form method="post">
 <center><h2>Your Cart</h2></center>
-
 <center><table>
         <tr>
             <p>Destination:<?php switch($_COOKIE['Destination_Selection']){
                 case 0:
                     echo "Bahamas";
+                    break;
                 case 1:
                     echo 'Carribean';
+                    break;
                 case 2:
-                    echo 'Alaska'
-            }?></p>
+                    echo 'Alaska';
+                    }
+
+
+            ?></p>
         </tr>
         <tr>
             <p>Room:
-                <?php switch($_COOKIE['Room_Selection']){
+                <?php
+                switch($_COOKIE['Room_Selection']){
                 case 0:
                     echo "Basic";
+                    break;
                 case 1:
                     echo 'Standard';
+                    break;
                 case 2:
-                    echo 'Luxury'
-            }?>
+                    echo 'Luxury';
+                    }
+
+
+            ?>
 
 
 
@@ -341,7 +352,9 @@ input[type=radio]:checked ~ .radio
                     echo 'No';
                 case 1:
                     echo 'Yes';
-            }?>
+                    }
+
+            ?>
         </tr>
         <tr>
             <p>Subtotal= </p>
@@ -438,12 +451,13 @@ input[type=radio]:checked ~ .radio
     </tr>
     <tr>
     <div class="button">
-        <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
+        <input name="submit" value="Confirm and Pay" type="submit">
     </div>
 </div>
 </center>
 </tr>
 </table></center>
+    </form>
 
 <br>
 <br>
