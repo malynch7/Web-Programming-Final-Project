@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-size: 100%;
+    font-family:  "Courier New";
+    background-image: url('../images/canberra.jpg');
+}
+
         div {
             background-color: blue;
             color: white;
@@ -45,7 +54,7 @@
 <center><div>
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
             <li class="linav"><a href="#news">Logout</a></li>
         </ul>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>YouTube</title>
+<style>
+   body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-size: 100%;
+    font-family:  "Courier New";
+    background-image: url('../images/canberra.jpg');
+}
+
+        div {
+            background-color: blue;
+            color: white;
+        }
+
+        .ulnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .linav {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+</style>
+
+</head>
+<body>
+    <div></div>
+<h1>Cruise and Park</h1>
+</div>
+<br><br>
+<center><div class="divtop">
+        <h1>Cruise and Park</h1>
+        <ul class="ulnav">
+            <li class="linav"><a class="active" href="youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
+            <li class="linav"><a href="#news">Logout</a></li>
+        </ul>
+    </div></center>
+<iframe class="video"
+        src="https://youtube.com/embed/2H-DO5-uhO4">
+</iframe>
+<br>
+<form action="index.php">
+    <input type="submit" value="Book Now"/>
+</form>
+
+</body>
+</html>
