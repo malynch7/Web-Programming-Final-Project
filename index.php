@@ -12,6 +12,8 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
 }
 
 // select controller
+
+// if not logged in
 if(!isset($_COOKIE['email'])) {
     if (isset($_GET['controller']) && !empty($_GET['controller'])) {
         switch($_GET['controller']){
@@ -25,6 +27,8 @@ if(!isset($_COOKIE['email'])) {
                 break;
         }
     }
+
+// if logged in, but not in booking process
 }else if(!isset($_COOKIE['bookingStage'])){
     if(isset($_GET['controller']) && !empty($_GET['controller']) && $_GET['controller'] == 'profile'){
         $model->template = 'views/profile.php';
@@ -32,6 +36,8 @@ if(!isset($_COOKIE['email'])) {
         require_once 'controllers/Menu.php';
         $controller = new Menu($model);
     }
+
+// booking process
 }else{
     switch($_COOKIE['bookingStage']){
         case 0:

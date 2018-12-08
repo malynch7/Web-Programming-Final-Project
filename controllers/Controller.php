@@ -19,10 +19,15 @@ class Controller
 
     public function clearBooking(){
         unset($_COOKIE['bookingStage']);
+        setcookie("bookingStage", "", time() - 3600);
         unset($_COOKIE['Destination_Selection']);
+        setcookie("Destination_Selection", "", time() - 3600);
         unset($_COOKIE['Room_Selection']);
+        setcookie("Room_Selection", "", time() - 3600);
         unset($_COOKIE['Parking_Lot']);
+        setcookie("Parking_Lot", "", time() - 3600);
         unset($_COOKIE['Parking_Bool']);
+        setcookie("Parking_Bool", "", time() - 3600);
 
     }
 }
