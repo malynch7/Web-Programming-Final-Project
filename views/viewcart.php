@@ -22,8 +22,8 @@ $ParkinglotMain = $_COOKIE["Parking_Lot"] + $ParkinglotMain;
 $Des_Cr = array(399.99, 599.99, 999.99);
 $Room_Sel = array(0, 199.99, 399.99);
 $Lot_Sel = array(25, 35, 60);
-$Total_amount = $Des_Cr[$_COOKIE["Destination_Selection"]] +  $Room_Sel[$_COOKIE["Room_Selection"]] + $Lot_Sel[$_COOKIE["Parking_Lot"]];
-$_COOKIE["numberOfRooms"] = $_COOKIE["numberOfRooms"] * $Des_Cr[$_COOKIE["Destination_Selection"]];
+$Total_amount = ($Des_Cr[$_COOKIE["Destination_Selection"]] +  $Room_Sel[$_COOKIE["Room_Selection"]]) * $_COOKIE["numberOfRooms"] + $Lot_Sel[$_COOKIE["Parking_Lot"]];
+
 
 
 // Create connection
