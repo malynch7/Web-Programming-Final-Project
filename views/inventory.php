@@ -23,7 +23,7 @@ if($_POST['One']){
 </head>
 
 <body>
-<center><div>
+<center><div class="divtop">
         <h1>Destination</h1>
         <ul class="ulnav">
             <li class="linav"><a href="#about">YouTube Video</a></li>

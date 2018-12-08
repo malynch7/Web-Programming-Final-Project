@@ -2,41 +2,8 @@
 <html>
 <head>
     <title>View Your Cart</title>
-
+    <link rel="stylesheet" type="text/css" href="/css/Style.css">
     <style>
-
-        .divtop {
-            background-color: blue;
-            color: white;
-        }
-
-        .ulnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .linav {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
 
 .container
     display: flex
@@ -236,7 +203,7 @@ input[type=radio]:checked ~ .radio
 <center><div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
             <li class="linav"><a href="#news">Logout</a></li>
         </ul>
