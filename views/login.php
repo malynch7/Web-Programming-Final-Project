@@ -2,7 +2,7 @@
     <html>
         <head>
             <title>Correct Login</title>
-              <link rel="stylesheet" type="text/css" href="/views/LoginStyle.css">
+              <link rel="stylesheet" type="text/css" href="views/css/LoginStyle.css">
         </head>
         <body>
             <?php
@@ -10,7 +10,7 @@
                 $passwordSQL="";
                 $EmailSQL="";
                 $CustomerID=0;
-                session_start();
+                //session_start();
                 $uname="";
                 $User_true=0;
                 $Pass_true=0;
@@ -110,9 +110,10 @@ echo "the username is ".$uname;
 }
 
                             if($Both_true==1){
-                                setcookie("member_login",$uname,time()+(10*365*24*60*60));
-                                setcookie("member_password",$pass,time()+(10*365*24*60*60));
-                                setcookie("member_customerID",$CustomerID,time()+(10*365*24*60*60));
+                                session_start();
+                                setcookie("email",$uname,time()+(2*60*60));
+                                //setcookie("member_password",$pass,time()+(10*365*24*60*60));
+                                //setcookie("member_customerID",$CustomerID,time()+(10*365*24*60*60));
                                 if(!empty($_POST["remember"])){
 
 
@@ -122,7 +123,7 @@ echo "the username is ".$uname;
                                 $error = "Not success";
                                 $success = "Welcome! ";
 
-                                    header("Location:Display.php");
+                                    header("Location:index.php");
                                     echo '</script>';
                                     $User_true=0;
                                     $Pass_true=0;
@@ -140,7 +141,7 @@ echo "the username is ".$uname;
             ?>
                     <table id="mainframe">
              <div class="CorrectLogin">
-                <img src="images/PhotoIcon.png" class="IconMain">
+                <img src="views/images/PhotoIcon.png" class="IconMain">
                 <h1>  Login </h1>
                 <form method="post">
                     <p>Email: </p>
@@ -154,7 +155,7 @@ echo "the username is ".$uname;
                     <input type="submit" name="submit" value="Login">
                      <label for="remember-me">Remember me:</label>
                     <input type="checkbox" class="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> name="remember" />
-                    <a class="register" href="Register.php">Register</a>
+                    <a class="register" href="index.php?controller=register">Register</a>
                         </form>
              </div>
         </tr>
