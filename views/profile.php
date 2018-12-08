@@ -21,8 +21,13 @@ if (!$result) {
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<br> email: ". $row["email"]. " - password: ". $row["password"]. "first_name" . $row["first_name"] . " last_name: ". $row["last_name"] ."<br>";
-        $largestvalue=$row["purchase_number"];
+       // echo "<br> email: ". $row["email"]. " - password: ". $row["password"]. "first_name" . $row["first_name"] . " last_name: ". $row["last_name"] ."<br>";
+        if($row["email"]==$userEmail){
+            echo "First Name ".$row["first_name"];
+            echo "First Name ".$row["last_name"];
+
+
+        }
     }
 } else {
     echo "0 results";

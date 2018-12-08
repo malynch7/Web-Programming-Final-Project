@@ -357,13 +357,11 @@ input[type=radio]:checked ~ .radio
             ?>
         </tr>
         <tr>
-            <p>Subtotal= </p>
-        </tr>
-        <tr>
-            <p>Tax= </p>
-        </tr>
-        <tr>
-            <p>Total= </p>
+            <p>Subtotal=
+                <?php
+                    echo $Total_amount;
+                ?>
+            </p>
         </tr>
     </table></center>
 
