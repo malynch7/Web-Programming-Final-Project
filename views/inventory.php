@@ -1,16 +1,11 @@
 <?php
-$price = 0;
 
-$FinalVal = $_POST['One'];
-echo $FinalVal;
-if ($_POST['One']) {
+if (isset($_POST['One'])) {
+    $FinalVal = $_POST['One'];
     setcookie("Destination_Selection", $FinalVal, time() + (2 * 60 * 60));
-    echo "Destination_Selection: " . $_COOKIE["Destination_Selection"];
     setcookie("bookingStage", 1, time() + (2 * 60 * 60), '/~mlynch7/finalProject');
     header("Location:index.php");
 }
-
-
 ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -26,7 +21,7 @@ if ($_POST['One']) {
 <body>
 <center>
     <div class="divtop">
-        <h1>Destination</h1>
+        <h1>Cruise and Park</h1>
         <ul class="ulnav">
             <li class="linav"><a href="#about">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
@@ -34,94 +29,65 @@ if ($_POST['One']) {
         </ul>
     </div>
 </center>
+<br>
 
-<center><h2>Select a Cruise Package</h2></center>
-
-<center>
-    <table>
-        <tr>
-            <td>
-                <h4>Bahamas</h4>
-            </td>
-            <td>
-                <h4>Carribean</h4>
-            </td>
-            <td>
-                <h4>Alaska</h4>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="views/images/bahamas.jpg" alt="Bahamas">
-            </td>
-            <td>
-                <img src="views/images/caribbean.jpg" alt="Caribbean">
-            </td>
-            <td>
-                <img src="views/images/alaska.jpg" alt="Alaska">
-            </td>
-        </tr>
-        <form method="post">
-            <tr>
-                <center>
-                    <td>
-                        <input type="radio" name="One" value="0"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="One" value="1"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="One" value="2"> <br>
-                    </td>
-                </center>
-            </tr>
+<div class="jumbotron">
+    <h2 align="center">Select a Cruise Package</h2>
+    <center>
+        <table>
             <tr>
                 <td>
+                    <h4 align="center">Bahamas</h4>
+                    <img align="center" src="views/images/bahamas.jpg" alt="Bahamas">
                     <ul>
                         <li>Unlimited Food & Drinks</li>
                         <li>4 days and 3 nights</li>
                         <li>Port Miami, Flordia | Key West, Flordia | Nassau, Bahamas</li>
-                        <li>$399.99</li>
                     </ul>
+                    <p align="center"><strong style="font-size: 20px">$399.99</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="One" value="0">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
                 </td>
                 <td>
+                    <h4 align="center">Carribean</h4>
+                    <img align="center" src="views/images/caribbean.jpg" alt="Caribbean">
                     <ul>
                         <li>Unlimited Food & Drinks</li>
                         <li>6 days and 5 nights</li>
                         <li>Port Canaveral, Florida | Key West, Florida | Nassau, Bahamas | Cozumel, Mexico | Puerto
                             Costa Maya, Mexico
                         </li>
-                        <li>$599.99</li>
                     </ul>
+                        <p align="center"><strong style="font-size: 20px">$599.99</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="One" value="1">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
                 </td>
                 <td>
-                    <li>Unlimited Food & Drinks</li>
-                    <li>10 days and 9 nights</li>
-                    <li>Seward, Alaska | Juneau, Alaska | Skagway, Alaska | Icy Strait, Point Alaska | Vancouver,
-                        British Columbia | Ketchikan, Alaska
-                    </li>
-                    <li>$999.99</li>
+                    <h4 align="center">Alaska</h4>
+                    <img align="center" src="views/images/alaska.jpg" alt="Alaska">
+                    <ul>
+                        <li>Unlimited Food & Drinks</li>
+                        <li>10 days and 9 nights</li>
+                        <li>Seward, Alaska | Juneau, Alaska | Skagway, Alaska | Icy Strait, Point Alaska | Vancouver,
+                            British Columbia | Ketchikan, Alaska
+                        </li>
                     </ul>
+                    <p align="center"><strong style="font-size: 20px">$999.99</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="One" value="2">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
                 </td>
             </tr>
-            <tr>
-                <td colspan="3"><p align="center"><input type="submit" value="Add To Cart"></p></td>
-            </tr>
-        </form>
-    </table>
-</center>
-
+        </table>
+    </center>
+</div>
 <br>
 <p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
-
-<br>
-<br>
-<br>
-<br>
 <br>
 <hr>
 <center><p>© Copyright 2018 Cruise and Park</p></center>

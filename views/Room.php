@@ -1,10 +1,11 @@
 <?php
 
-
-echo $_POST['room'];
-$RoomVal = 0;
-if ($_POST['room']) {
+if (isset($_POST['room'])) {
+    $RoomVal = 0;
     $RoomVal = $_POST['room'];
+    if(isset($_POST['numberOfRooms'])){
+        setcookie("numberOfRooms", $_POST['numberOfRooms'], time() + (2 * 60 * 60));
+    }
     setcookie("Room_Selection", $RoomVal, time() + (2 * 60 * 60));
     setcookie("bookingStage", 2, time() + (2 * 60 * 60), '/~mlynch7/finalProject');
     header("Location:index.php");
@@ -82,6 +83,7 @@ if ($_POST['room']) {
                 </center>
                 <center>
                     <td>
+                        <input type="hidden" name="numberOfRooms" value="1">
                         <input type="submit" value="Add To Cart">
                     </td>
                 </center>

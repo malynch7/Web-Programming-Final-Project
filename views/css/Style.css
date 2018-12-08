@@ -1,58 +1,74 @@
-body .terminal{
-  background-size:cover;
-  background-size: 100%;
-  background-image: url('../images/canberra.jpg');
+body .terminal {
+    background-size: cover;
+    background-size: 100%;
+    background-image: url('../images/canberra.jpg');
 }
 
 .divtop {
-background-color: #007bff;
-color: white;
+    background-color: #007bff;
+    color: white;
 }
 
 .divbg {
-  background-color: white;
+    background-color: white;
 }
 
 .ulnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 .linav {
-  float: left;
+    float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+    background-color: #111;
 }
 
 .active {
-  background-color: #4CAF50;
+    background-color: #4CAF50;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-size:cover;
-  background-size: 100%;
-  background-image: url('../images/canberra.jpg');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-size: 100%;
+    background-image: url('../images/canberra.jpg');
 }
 
-.card{
+.card {
     margin: auto;
 }
 
-.card .btn-primary{
+.card .btn-primary {
     width: 80%;
+}
+
+.jumbotron {
+    width: 80%;
+    margin: auto;
+    padding: 3%;
+    height: 50%;
+}
+
+.jumbotron td{
+    width: 33%;
+    text-align: center;
+}
+
+.jumbotron ul{
+    text-align: left;
 }

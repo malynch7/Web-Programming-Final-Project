@@ -1,12 +1,9 @@
 <?php
 
-
-echo $_POST['parking'];
-$ParkVal = 0;
-if ($_POST['parking']) {
+if (isset($_POST['parking'])) {
+    $ParkVal = 0;
     $ParkVal = $_POST['parking'];
     setcookie("Parking_Bool", $ParkVal, time() + (2 * 60 * 60));
-
     if ($ParkVal == '1') {
         setcookie("bookingStage", 3, time() + (2 * 60 * 60), '/~mlynch7/finalProject');
     } else {

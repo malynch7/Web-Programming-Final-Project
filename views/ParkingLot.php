@@ -1,7 +1,5 @@
 <?php
-echo $_POST['Lot'];
-echo $_POST['Lot'];
-$Lot_Val = 0;
+
 if (isset($_POST['Lot'])) {
     $Lot_Val = $_POST['Lot'];
     setcookie("Parking_Lot", $Lot_Val, time() + (2 * 60 * 60));
