@@ -323,5 +323,12 @@ input[type=radio]:checked ~ .radio
 </tr>
 </table></center>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<p>© Copyright 2018 Cruise and Park</p>
 </body>
 <html>
