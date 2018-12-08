@@ -4,54 +4,11 @@
     <title>Congratulations</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-
-body{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-size: 100%;
-    font-family:  "Courier New";
-    background-image: url('../images/canberra.jpg');
-}
-
-        div {
-            background-color: blue;
-            color: white;
-        }
-
-        .ulnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .linav {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" type="text/css" href="/css/Style.css">
+    </head>
 
 <body>
-<center><div>
+<center><div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
             <li class="linav"><a href="youtube.html">YouTube Video</a></li>
