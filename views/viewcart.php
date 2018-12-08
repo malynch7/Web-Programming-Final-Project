@@ -236,10 +236,9 @@ input[type=radio]:checked ~ .radio
 <center><div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="#home">Home</a></li>
-            <li class="linav"><a href="#news">Login</a></li>
-            <li class="linav"><a href="#contact">Contact</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a class="active" href="youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
+            <li class="linav"><a href="#news">Logout</a></li>
         </ul>
     </div></center>
 
