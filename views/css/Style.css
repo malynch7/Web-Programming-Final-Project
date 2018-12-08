@@ -9,6 +9,10 @@ background-color: blue;
 color: white;
 }
 
+.divbg {
+  background-color: white;
+}
+
 .ulnav {
   list-style-type: none;
   margin: 0;
