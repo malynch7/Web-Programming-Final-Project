@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
-<body>
+<body class="terminal">
 <center><div>
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
