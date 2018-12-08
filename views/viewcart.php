@@ -2,50 +2,8 @@
 <html>
 <head>
     <title>View Your Cart</title>
-
+    <link rel="stylesheet" type="text/css" href="/css/Style.css">
     <style>
-
-body{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-size: 100%;
-    font-family:  "Courier New";
-    background-image: url('../images/canberra.jpg');
-}
-
-        .divtop {
-            background-color: blue;
-            color: white;
-        }
-
-        .ulnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .linav {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
 
 .container
     display: flex

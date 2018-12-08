@@ -19,69 +19,16 @@ if($_POST['One']){
     <title>Cruise and Park</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-    <style>
-
-        body{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-size: 100%;
-    font-family:  "Courier New";
-    background-image: url('../images/canberra.jpg');
-}
-
-        div {
-            background-color: blue;
-            color: white;
-        }
-
-        .ulnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .linav {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-
-        .active {
-            background-color: #4CAF50;
-        }
-    </style>
-=======
     <link rel="stylesheet" type="text/css" href="views/css/Style.css">
->>>>>>> 14ed4b59b9444d488dc68a55cce0c90dad56ec24
 </head>
 
 <body>
-<center><div>
+<center><div class="divtop">
         <h1>Destination</h1>
         <ul class="ulnav">
-<<<<<<< HEAD
-            <li class="linav"><a href="youtube.html">YouTube Video</a></li>
-            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">See Project on GitHub</a></li>
-            <li class="linav"><a href="#news">Logout</a></li>
-=======
             <li class="linav"><a href="#about">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
             <li class="linav"><a href="index.php?action=logout">Log out</a></li>
->>>>>>> 14ed4b59b9444d488dc68a55cce0c90dad56ec24
         </ul>
     </div></center>
 

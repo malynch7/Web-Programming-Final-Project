@@ -4,7 +4,7 @@ body{
   background-image: url('../images/canberra.jpg');
 }
 
-div {
+.divtop {
 background-color: blue;
 color: white;
 }
@@ -35,4 +35,13 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #4CAF50;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-size:cover;
+  background-size: 100%;
+  font-family:  "Courier New";
+  background-image: url('../images/canberra.jpg');
 }
