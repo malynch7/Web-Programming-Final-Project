@@ -18,104 +18,86 @@ if (isset($_POST['room'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cruise and Book</title>
+    <title>Cruise and Park</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
 <body>
 <center>
-    <div>
+    <div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="#home">Home</a></li>
-            <li class="linav"><a href="login.php">Login</a></li>
-            <li class="linav"><a href="#contact">Contact</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
+            <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
     </div>
 </center>
-
-<center><h2>Select a Cruise Package</h2></center>
-
-<center>
-    <table>
-        <tr>
-            <td>
-                <h4>Baseroom room: </h4>
-            </td>
-            <td>
-                <h4>Standard room: </h4>
-            </td>
-            <td>
-                <h4>Luxury room: </h4>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/151fbd32_z.jpg" alt="base" width="250" height="150">
-            </td>
-            <td>
-                <img src="images/StandardRoom.jpg" alt="standard" width="250" height="100">
-            </td>
-            <td>
-                <img src="images/Rist-Piccolo-Mondo-Camere_3328.jpg" alt="luxury" width="250" height="150">
-            </td>
-        </tr>
-        <tr>
-            <form method="post">
-                <center>
-                    <td>
-                        <input type="radio" name="room" value="0"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="room" value="1"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="room" value="2"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="hidden" name="numberOfRooms" value="1">
-                        <input type="submit" value="Add To Cart">
-                    </td>
-                </center>
-            </form>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>$199.99</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>$299.99</li>
-                </ul>
-            </td>
-            <td>
-                <li>$399.99</li>
-                </ul>
-            </td>
-
-        </tr>
-    </table>
-</center>
-
 <br>
+<div class="jumbotron">
+    <h2 align="center">Select a Room</h2>
+    <br>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h4 align="center">Economy Room</h4>
+                    <img src="views/images/151fbd32_z.jpg" alt="base" width="250" height="150">
+                    <br>
+                    <p align="center"><strong style="font-size: 20px">No Extra Charge</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="room" value="0">
+                        <select name="numberOfRooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <br><br>
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+                <td>
+                    <h4 align="center">Standard Room</h4>
+                    <img src="views/images/StandardRoom.jpg" alt="standard" width="250" height="150">
+                    <br>
+                    <p align="center"><strong style="font-size: 20px">$199.99</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="room" value="1">
+                        <select name="numberOfRooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <br><br>
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+                <td>
+                    <h4 align="center">Luxury Suite</h4>
+                    <img src="views/images/Rist-Piccolo-Mondo-Camere_3328.jpg" alt="luxury" width="250" height="150">
+                    <br>
+                    <p align="center"><strong style="font-size: 20px">$399.99</strong> per room</p>
+                    <form method="post">
+                        <input type="hidden" name="room" value="2">
+                        <select name="numberOfRooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <br><br>
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
 <br>
-<br>
-<br>
+<p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
 <br>
 <hr>
 <center><p>© Copyright 2018 Cruise and Park</p></center>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -25,23 +25,33 @@ if (isset($_POST['parking'])) {
 
 <body>
 <center>
-    <div>
-        <h1>Parking</h1>
+    <div class="divtop">
+        <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="#home">Home</a></li>
-            <li class="linav"><a href="login.php">Login</a></li>
-            <li class="linav"><a href="#contact">Contact</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
+            <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
     </div>
 </center>
-<h2>Do you want park?</h2>
-<form method="post">
-    <input type="radio" name="parking" value="1"> Yes<br>
-    <input type="radio" name="parking" value="0"> No<br>
-    <input type="submit" value="Add To Cart">
-</form>
 
+<br>
+<br>
+<div class="card" style="width: 22rem; margin-top: 5%">
+    <div class="card-body">
+        <h3 class="card-title" align="center">Will you need parking?</h3>
+        <hr><br>
+        <form method="post" >
+            <input  type="hidden" name="parking" value="1">
+            <input class="btn btn-primary" type="submit" value="Yes">
+        </form>
+        <br><br>
+        <form method="post" >
+            <input  type="hidden" name="parking" value="0">
+            <input class="btn btn-primary" type="submit" value="No">
+        </form>
+    </div>
+</div>
 <br>
 <br>
 <br>

@@ -6,114 +6,90 @@ if (isset($_POST['Lot'])) {
     setcookie("bookingStage", 4, time() + (2 * 60 * 60), '/~mlynch7/finalProject');
     header("Location:index.php");
 }
-echo "Parking lot" . $_Cookie["Parking_Lot"];
 ?>
 
-
+<!DOCTYPE html>
 <html>
 <head>
     <title>Parking Lot Selection</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <link rel="stylesheet" type="text/css" href="views/css/Style.css">
 </head>
 
 <body>
 <center>
-    <div>
-        <h1>Parking</h1>
+    <div class="divtop">
+        <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a class="active" href="#home">Home</a></li>
-            <li class="linav"><a href="login.php">Login</a></li>
-            <li class="linav"><a href="#contact">Contact</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
+            <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
     </div>
 </center>
-<h2>Pick a lot</h2>
-<center>
-    <table>
-        <tr>
-            <td>
-                <h4>Baseroom room: </h4>
-            </td>
-            <td>
-                <h4>Standard room: </h4>
-            </td>
-            <td>
-                <h4>Luxury room: </h4>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/RegularParking.jpg" alt="base" width="250" height="150">
-            </td>
-            <td>
-                <img src="images/StandardParking.png" alt="standard" width="250" height="100">
-            </td>
-            <td>
-                <img src="images/ValetParking.jpg" alt="luxury" width="250" height="150">
-            </td>
-        </tr>
-        <tr>
-            <form method="post">
-                <center>
-                    <td>
-                        <input type="radio" name="Lot" value="0"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="Lot" value="1"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="radio" name="Lot" value="2"> <br>
-                    </td>
-                </center>
-                <center>
-                    <td>
-                        <input type="submit" value="Add To Cart">
-                    </td>
-                </center>
-            </form>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Red Lot</li>
-                    <li>Walking Distance</li>
-                    <li>$25</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Red Lot</li>
-                    <li>Shuttle</li>
-                    <li>$35</li>
-                </ul>
-            </td>
-            <td>
-                <li>VIP Lot</li>
-                <li>Valet</li>
-                <li>$60</li>
-                </ul>
-            </td>
-
-        </tr>
-    </table>
-</center>
-
-
 <br>
+<div class="jumbotron">
+    <h2 align="center">Select a Parking Lot</h2>
+    <br>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <h4 align="center">Red Lot</h4>
+                    <img src="views/images/RegularParking.jpg" alt="base" width="250" height="150">
+                    <br><br>
+                    <ul>
+                        <li>Short walk to port</li>
+                    </ul>
+                    <p align="center"><strong style="font-size: 20px">$25</strong></p>
+                    <br>
+                    <form method="post">
+                        <input type="hidden" name="Lot" value="0">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+                <td>
+                    <h4 align="center">Blue Lot</h4>
+                    <img src="views/images/StandardParking.png" alt="standard" width="250" height="150">
+                    <br><br>
+                    <ul>
+                        <li>Shuttle service to port</li>
+                    </ul>
+                    <p align="center"><strong style="font-size: 20px">$35</strong></p>
+                    <br>
+                    <form method="post">
+                        <input type="hidden" name="Lot" value="1">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+                <td>
+                    <h4 align="center">VIP Lot</h4>
+                    <img src="views/images/ValetParking.jpg" alt="standard" width="250" height="150">
+                    <br><br>
+                    <ul>
+                        <li>Valet service at port</li>
+                    </ul>
+                    <p align="center"><strong style="font-size: 20px">$60</strong></p>
+                    <br>
+                    <form method="post">
+                        <input type="hidden" name="Lot" value="2">
+                        <p align="center"><input class="btn btn-primary" type="submit" value="Add To Cart"></p>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
 <br>
-<br>
-<br>
+<p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
 <br>
 <hr>
 <center><p>© Copyright 2018 Cruise and Park</p></center>
+
+
+</body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -124,5 +100,5 @@ echo "Parking lot" . $_Cookie["Parking_Lot"];
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-</body>
+
 <html>

@@ -15,7 +15,7 @@ if (isset($_POST['One'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="views/css/Style.css">
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
 </head>
 
 <body>
@@ -23,22 +23,23 @@ if (isset($_POST['One'])) {
     <div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
             <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
     </div>
 </center>
 <br>
-
 <div class="jumbotron">
     <h2 align="center">Select a Cruise Package</h2>
+    <br>
     <center>
         <table>
             <tr>
                 <td>
                     <h4 align="center">Bahamas</h4>
                     <img align="center" src="views/images/bahamas.jpg" alt="Bahamas">
+                    <br>
                     <ul>
                         <li>Unlimited Food & Drinks</li>
                         <li>4 days and 3 nights</li>
@@ -53,6 +54,7 @@ if (isset($_POST['One'])) {
                 <td>
                     <h4 align="center">Carribean</h4>
                     <img align="center" src="views/images/caribbean.jpg" alt="Caribbean">
+                    <br>
                     <ul>
                         <li>Unlimited Food & Drinks</li>
                         <li>6 days and 5 nights</li>
@@ -69,6 +71,7 @@ if (isset($_POST['One'])) {
                 <td>
                     <h4 align="center">Alaska</h4>
                     <img align="center" src="views/images/alaska.jpg" alt="Alaska">
+                    <br>
                     <ul>
                         <li>Unlimited Food & Drinks</li>
                         <li>10 days and 9 nights</li>
