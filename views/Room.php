@@ -7,7 +7,7 @@
     if($_POST['room']){
         $RoomVal = $_POST['room'];
         setcookie("Room_Selection",$RoomVal, time() + (2*60*60));
-        $_Cookie['bookingStage']=2;
+        setcookie("bookingStage", 2, time() + (2*60*60), '/~mlynch7/finalProject');
         header("Location:index.php");
     }
 
