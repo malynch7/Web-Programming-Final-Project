@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cruise and Book</title>
+    <title>Pick a Destination</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -52,7 +52,7 @@
         </ul>
     </div></center>
 
-<center><h2>Select a Cruise Package</h2></center>
+<center><h2>Select a Destination</h2></center>
 
 <center><table>
         <tr>
@@ -68,13 +68,13 @@
         </tr>
         <tr>
             <td>
-                <img src="bahamas.jpg" alt="Bahamas">
+                <img src="views/images/bahamas.jpg" alt="Bahamas">
             </td>
             <td>
-                <img src="caribbean.jpg" alt="Caribbean">
+                <img src="views/images/caribbean.jpg" alt="Caribbean">
             </td>
             <td>
-                <img src="alaska.jpg" alt="Alaska">
+                <img src="views/images/alaska.jpg" alt="Alaska">
             </td>
         </tr>
         <tr>
@@ -96,8 +96,8 @@
         <tr>
             <td>
                 <ul>
-                    <li>2 People</li>
-                    <li>1 Room</li>
+                    <li>1 Person</li>
+                    <li>1 Standard Room</li>
                     <li>Unlimited Food & Drinks</li>
                     <li>4 days and 3 nights</li>
                     <li>Port Miami, Flordia | Key West, Flordia | Nassau, Bahamas</li>
@@ -106,8 +106,8 @@
             </td>
             <td>
                 <ul>
-                    <li>2 People</li>
-                    <li>1 Room</li>
+                    <li>1 Person</li>
+                    <li>1 Standard Room</li>
                     <li>Unlimited Food & Drinks</li>
                     <li>6 days and 5 nights</li>
                     <li>Port Canaveral, Florida | Key West, Florida | Nassau, Bahamas | Cozumel, Mexico | Puerto Costa Maya, Mexico</li>
@@ -115,8 +115,8 @@
                 </ul>
             </td>
             <td>
-                <li>2 People</li>
-                <li>1 Room</li>
+                <li>1 Person</li>
+                <li>1 Standard Room</li>
                 <li>Unlimited Food & Drinks</li>
                 <li>10 days and 9 nights</li>
                 <li>Seward, Alaska | Juneau, Alaska | Skagway, Alaska | Icy Strait, Point Alaska | Vancouver, British Columbia | Ketchikan, Alaska</li>
