@@ -327,7 +327,7 @@ input[type=radio]:checked ~ .radio
                 case 1:
                     echo 'Standard';
                 case 2:
-                    echo 'Luxury'
+                    echo 'Luxury';
             }?>
 
 
@@ -336,11 +336,15 @@ input[type=radio]:checked ~ .radio
         </tr>
         <tr>
             <p>Parking: </p>
-            <?php switch($_COOKIE['Parking_Bool']){
+            <?php switch($ParkinglotMain){
                 case 0:
-                    echo 'No';
+                    echo 'Red Lot';
                 case 1:
-                    echo 'Yes';
+                    echo 'Blue Lot';
+                case 2:
+                    echo 'VIP Lot';
+                case 3:
+                    echo 'None';
             }?>
         </tr>
         <tr>
