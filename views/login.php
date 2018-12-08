@@ -162,5 +162,12 @@ echo "the username is ".$uname;
 
                     </table>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<center><p>© Copyright 2018 Cruise and Park</p></center>
         </body>
     </html>

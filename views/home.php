@@ -36,6 +36,13 @@
 <br>
 <p align="center"><a class="btn btn-primary" href="index.php?controller=register" role="button">Sign Up</a></p>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<center><p>© Copyright 2018 Cruise and Park</p></center>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

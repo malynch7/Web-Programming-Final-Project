@@ -329,6 +329,6 @@ input[type=radio]:checked ~ .radio
 <br>
 <br>
 <hr>
-<p>© Copyright 2018 Cruise and Park</p>
+<center><p>© Copyright 2018 Cruise and Park</p></center>
 </body>
 <html>
