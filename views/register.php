@@ -12,7 +12,7 @@
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
             <li class="linav"><a href="index.php">Home</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
         </ul>
     </div></center>
@@ -20,7 +20,7 @@
  <div class="CorrectLogin">
         <img src="views/images/PhotoIcon.png" class="IconMain">
         <h1>Register</h1>
-         <form action="MainRegister.php" method="post">
+         <form action="views/MainRegister.php" method="post">
         <p>First Name: </p>
         <input type="text" name="RegFirstName" id="RegFirstName">
         <p>Last Name: </p>

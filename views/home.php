@@ -24,15 +24,14 @@
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
             <li class="linav"><a href="index.php">Home</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
         </ul>
     </div></center>
 <br>
-<br>
 <div class="card" style="width: 22rem; margin-top: 5%">
     <div class="card-body">
-        <h3 class="card-title" align="center">Cruise and Park</h3>
+        <h3 class="card-title" align="center">Welcome</h3>
         <hr><br><br>
         <p align="center"><a class="btn btn-primary" href="index.php?controller=login" role="button">Log In</a></p>
         <br>
@@ -42,9 +41,6 @@
 
     </div>
 </div>
-
-<br>
-<br>
 <br>
 <br>
 <br>

@@ -13,7 +13,7 @@
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
             <li class="linav"><a href="index.php">Home</a></li>
-            <li class="linav"><a href="#about">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
         </ul>
     </div>
@@ -44,7 +44,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-    echo 'successfully connected';
+    //echo 'successfully connected';
 }
 
 if (isset($_POST['username'])) {
