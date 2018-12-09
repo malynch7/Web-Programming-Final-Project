@@ -102,6 +102,9 @@ body {
 .historyTable td{
     width: auto;
 }
+.historyTable th{
+    text-align: center;
+}
 
 .video{
     margin: auto;
