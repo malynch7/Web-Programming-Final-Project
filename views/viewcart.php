@@ -226,6 +226,12 @@ $conn->close();
                 <div class="info">
                     <label for="cardholdername">Name</label>
                     <input placeholder="e.g. John Smith" id="cardholdername" type="text" />
+                    <label for="address">Address</label>
+                    <input placeholder="e.g. 33 Gilmer Street SE Atlanta, GA 30303" id="address" type="text" />
+                    <label for="billingaddress">Billing Address</label>
+                    <input placeholder="e.g. 33 Gilmer Street SE Atlanta, GA 30303" id="billingaddress" type="text" />
+                    <label for="phonenumber">Phone Number</label>
+                    <input placeholder="e.g. 404-413-2000" id="phonenumber" maxlength="12" type="text" />
                 </div>
             </div>
             </tr>
