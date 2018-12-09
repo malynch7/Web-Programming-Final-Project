@@ -41,6 +41,7 @@ if (isset($_POST['One'])) {
                     <img align="center" src="views/images/bahamas.jpg" alt="Bahamas">
                     <br>
                     <ul>
+                        <li>June 13th - June 16th, 2019</li>
                         <li>Unlimited Food & Drinks</li>
                         <li>4 days and 3 nights</li>
                         <li>Port Miami, Flordia | Key West, Flordia | Nassau, Bahamas</li>
@@ -56,6 +57,7 @@ if (isset($_POST['One'])) {
                     <img align="center" src="views/images/caribbean.jpg" alt="Caribbean">
                     <br>
                     <ul>
+                        <li>August 27th - September 1st, 2019</li>
                         <li>Unlimited Food & Drinks</li>
                         <li>6 days and 5 nights</li>
                         <li>Port Canaveral, Florida | Key West, Florida | Nassau, Bahamas | Cozumel, Mexico | Puerto
@@ -73,6 +75,7 @@ if (isset($_POST['One'])) {
                     <img align="center" src="views/images/alaska.jpg" alt="Alaska">
                     <br>
                     <ul>
+                        <li>March 4th - June 13th, 2020</li>
                         <li>Unlimited Food & Drinks</li>
                         <li>10 days and 9 nights</li>
                         <li>Seward, Alaska | Juneau, Alaska | Skagway, Alaska | Icy Strait, Point Alaska | Vancouver,

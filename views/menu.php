@@ -11,7 +11,6 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="views/css/Style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
     <div class="divtop">
         <h1>Cruise and Park</h1>
         <ul class="ulnav">
-            <li class="linav"><a href="view/youtube.html">YouTube Video</a></li>
+            <li class="linav"><a href="views/youtube.html">YouTube Video</a></li>
             <li class="linav"><a href="https://github.com/malynch7/Web-Programming-Final-Project">GitHub</a></li>
             <li class="linav"><a href="index.php?action=logout">Log out</a></li>
         </ul>
@@ -30,7 +29,7 @@
     <div class="card-body">
         <h3 class="card-title" align="center">Menu</h3>
         <hr>
-        <br><br>
+        <br>
         <p align="center"><a class="btn btn-primary" href="index.php?action=startBooking" role="button">Book a New
                 Trip</a></p>
         <br>

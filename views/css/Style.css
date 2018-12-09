@@ -67,8 +67,7 @@ body {
 }
 
 .card table{
-    width: 80%;
-    border: solid 2px black;
+
 }
 
 .card td{
@@ -88,4 +87,25 @@ body {
 
 .jumbotron ul{
     text-align: left;
+}
+
+.historyTable{
+    margin: auto;
+    width: 80%;
+    border: solid 2px black;
+}
+
+.historyTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.historyTable td{
+    width: auto;
+}
+
+.video{
+    margin: auto;
+    align-self: center;
+    width: 800px;
+    height: 450px;
 }

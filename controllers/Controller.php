@@ -28,6 +28,8 @@ class Controller
         setcookie("Parking_Lot", "", time() - 3600, '/~mlynch7/finalProject');
         unset($_COOKIE['Parking_Bool']);
         setcookie("Parking_Bool", "", time() - 3600, '/~mlynch7/finalProject');
+        unset($_COOKIE['purchaseNumber']);
+        setcookie("purchaseNumber", "", time() - 3600, '/~mlynch7/finalProject');
 
     }
 }

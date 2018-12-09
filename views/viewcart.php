@@ -76,13 +76,13 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-
 $sql2 = "INSERT INTO user_purchase (purchase_number,email) Values($largestvalue,'$EmailMain')";
-    setcookie("bookingStage",5,time()+(2*60*60),'/~mlynch7/finalProject');
-    header("Location:index.php");
+
 if ($conn->query($sql2) === TRUE) {
     echo "New record created successfully";
-
+    setcookie("purchaseNumber", $largestvalue,time()+(2*60*60),'/~mlynch7/finalProject');
+    setcookie("bookingStage",5,time()+(2*60*60),'/~mlynch7/finalProject');
+    header("Location:index.php");
 } else {
     echo "Error: " . $sql2 . "<br>" . $conn->error;
 }
@@ -114,7 +114,7 @@ $conn->close();
         </ul>
     </div>
 </center>
-<div class="card" style="width: 28rem; margin-top: 5%">
+<div class="card" style="width: 28rem; margin-top: 4%">
     <div class="card-body">
         <h3 align="center">Shopping Cart</h3>
         <hr><br>
@@ -177,6 +177,8 @@ $conn->close();
                                 break;
                             case 2:
                                 echo 'VIP Lot';
+                            case 3:
+                                echo 'None';
                         } ?></p>
                 </td>
                 <td>
@@ -195,118 +197,78 @@ $conn->close();
                 </td>
             </tr>
         </table>
-    </div>
-</div>
-
-
-<table>
-
-<tr>
-    <center>
-    <div class="container">
+        <br><br>
+        <h5 align="center">Payment</h5>
+        <hr>
+        <p align="center">Credit\Debit:
+            <img src="http://i45.tinypic.com/2jdqu89.jpg" alt="visa" />
+            <img src="http://i47.tinypic.com/357rfch.jpg" alt="mastercard" />
+            <img src="http://i42.tinypic.com/25tyo9l.jpg" alt="amex" />
+            <img src="http://i45.tinypic.com/2n23h9i.jpg" alt="discover" />
+        </p>
         <form method="post">
-    <div class="card__container">
-        <div class="card">
-            <div class="row credit">
-                <div class="left">
-                    <label for="cd">Debit/ Credit Card</label>
-                </div>
-                </tr>
-                <tr>
-                <div class="right">
-                    <img src="http://i45.tinypic.com/2jdqu89.jpg" alt="visa" />
-                    <img src="http://i47.tinypic.com/357rfch.jpg" alt="mastercard" />
-                    <img src="http://i42.tinypic.com/25tyo9l.jpg" alt="amex" />
-                    <img src="http://i45.tinypic.com/2n23h9i.jpg" alt="discover" />
-                </div>
+            <div align="center" style="white-space:nowrap">
+                <label for="nameOnCard">Name on card: </label>
+                <input type="text" name="nameOnCard" id="nameOnCard" required>
             </div>
-            </tr>
-            <tr>
-            <div class="row cardholder">
-                <div class="info">
-                    <label for="cardholdername">Name</label>
-                    <input placeholder="e.g. John Smith" id="cardholdername" type="text" />
-                    <label for="address">Address</label>
-                    <input placeholder="e.g. 33 Gilmer Street SE Atlanta, GA 30303" id="address" type="text" />
-                    <label for="billingaddress">Billing Address</label>
-                    <input placeholder="e.g. 33 Gilmer Street SE Atlanta, GA 30303" id="billingaddress" type="text" />
-                    <label for="phonenumber">Phone Number</label>
-                    <input placeholder="e.g. 404-413-2000" id="phonenumber" maxlength="12" type="text" />
-                </div>
+            <div align="center" style="white-space:nowrap">
+                <label for="address">Billing Address: </label>
+                <input placeholder="e.g. 33 Gilmer Street SE Atlanta, GA 30303" name="address" id="address" type="text" required/>
             </div>
-            </tr>
-            <tr>
-            <div class="row number">
-                <div class="info">
-                    <label for="cardnumber">Card number</label>
-                    <input id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19" placeholder="8888-8888-8888-8888"/>
-                </div>
+            <div align="center" style="white-space:nowrap">
+                <label for="phonenumber">Phone Number</label>
+                <input placeholder="e.g. 404-413-2000" id="phonenumber" name="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="text" required/>
             </div>
-            </tr>
-            <tr>
-            <div class="row details">
-                <div class="left">
-                    <label for="expiry-date">Expiry</label>
-                    <select id="expiry-date">
-                        <option>MM</option>
-                        <option value="1">01</option>
-                        <option value="2">02</option>
-                        <option value="3">03</option>
-                        <option value="4">04</option>
-                        <option value="5">05</option>
-                        <option value="6">06</option>
-                        <option value="7">07</option>
-                        <option value="8">08</option>
-                        <option value="9">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                    <span>/</span>
-                     <select id="expiry-date">
-                        <option>YYYY</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                        <option value="2028">2028</option>
-                        <option value="2029">2029</option>
-                        <option value="2030">2030</option>
-                    </select>
-                </div>
-                </tr>
-                <tr>
-                <div class="right">
-                    <label for="cvv">CVC/CVV</label>
-                    <input type="text" maxlength="4" placeholder="123"/>
-                    <span data-balloon-length="medium" data-balloon="The 3 or 4-digit number on the back of your card." data-balloon-pos="up"></span>
-                </div>
+            <div align="center" style="white-space:nowrap">
+                <label for="creditCardNumber">Card Number: </label>
+                <input pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" type="text" id="creditCardNumber"
+                       name="creditCardNumber" placeholder="8888-8888-8888-8888" required>
             </div>
-        </div>
-    </div>
-    </tr>
-    <tr>
-    <div class="button">
-        <input name="submit" value="Confirm and Pay" type="submit">
+            <div align="center" style="white-space:nowrap">
+                <label for="expirationMonth">Expiration Date: </label>
+                <select id="expirationMonth" name="expirationMonth">
+                    <option>MM</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <a>/</a>
+                <select name="expirationYear">
+                    <option>YYYY</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div align="center" style="white-space:nowrap">
+                <label for="cvv">CCV/CVV: </label>
+                <input type="text" pattern="[0-9]{3}" placeholder="123" name="cvv" id="cvv" required>
+            </div>
+            <br>
+            <p align="center"><input class="btn btn-primary" name="submit" value="Confirm and Pay" type="submit"></p>
+        </form>
     </div>
 </div>
-</center>
-</tr>
-</table></center>
-    </form>
-
 <br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<center><p>© Copyright 2018 Cruise and Park</p></center>
+<p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

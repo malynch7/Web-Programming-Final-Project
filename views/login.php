@@ -96,30 +96,30 @@ echo "\n";
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "<br> email: " . $row["email"] . " - password: " . $row["password"] . "first name" . $row["first_name"] . " last name: " . $row["last_name"] . "<br>";
-            echo $passwordSQL;
-            echo $EmailSQL;
-            echo "sql  is" . $row["email"];
-            echo "user is " . $uname;
-            echo "sqlpass is" . $row["password"];
-            echo "password is " . $pass;
+            //echo "<br> email: " . $row["email"] . " - password: " . $row["password"] . "first name" . $row["first_name"] . " last name: " . $row["last_name"] . "<br>";
+            //echo $passwordSQL;
+            //echo $EmailSQL;
+            //echo "sql  is" . $row["email"];
+            //echo "user is " . $uname;
+            //echo "sqlpass is" . $row["password"];
+            //echo "password is " . $pass;
 
             if ($row["password"] == $pass && $uname == $row["email"]) {
                 $Both_true = 1;
             } else if ($uname == $row["email"]) {
-                echo "email true";
+                //echo "email true";
                 $User_true = 1;
             } else if ($row["password"] == $pass) {
-                echo "pass true";
+                //echo "pass true";
                 $Pass_true = 1;
             }
         }
 
-        echo "the username is " . $uname;
+        //echo "the username is " . $uname;
 
 
     } else {
-        echo "0 results";
+        //echo "0 results";
     }
 
     if ($Both_true == 1) {
@@ -137,7 +137,7 @@ echo "\n";
         $success = "Welcome! ";
 
         header("Location:index.php");
-        echo '</script>';
+        //echo '</script>';
         $User_true = 0;
         $Pass_true = 0;
         $Both_true = 0;

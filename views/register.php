@@ -33,7 +33,7 @@
         <input type="password" name="ReRegPassword" id="ReRegPassword" required>
         <input type="submit" name="submitTwo" value="Register">
         </form>
-     <p align="center"><a class="register" href="index.php?controller=register">Log In</a></p>
+     <p align="center"><a class="register" href="index.php?controller=login">Log In</a></p>
  </div>
 <br>
 <br>
