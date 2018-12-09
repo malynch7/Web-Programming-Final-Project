@@ -3,6 +3,7 @@
 $RegFirstName = $_REQUEST['RegFirstName'];
 $RegLastName = $_REQUEST['RegLastName'];
 $RegEmail = $_REQUEST['RegEmail'];
+$StoreEmail = array();
 $RegPassword = $_REQUEST['RegPassword'];
 $ReRegPassword = $_REQUEST['ReRegPassword'];
 if ($RegPassword == $ReRegPassword) {
@@ -19,6 +20,7 @@ $username = "gsoni1";
 $password = "gsoni1";
 $dbname = "gsoni1";
 // Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -35,24 +37,29 @@ if ($result->num_rows > 0) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
         echo "<br> email: " . $row["email"] . " - password: " . $row["password"] . "first name" . $row["first_name"] . " last name: " . $row["last_name"] . "<br>";
+        array_push($StoreEmail,$row["email"]);
     }
 } else {
     echo "0 results";
 }
-$sql = "INSERT INTO user (email, password, first_name, last_name)
-VALUES ('$RegEmail', '$RegPassword', '$RegFirstName', '$RegLastName')";
+foreach($StoreEmail as $value) {
+      if($value!=$RegEmail){
+            $sql = "INSERT INTO user (email, password, first_name, last_name)
+            VALUES ('$RegEmail', '$RegPassword', '$RegFirstName', '$RegLastName')";
+            }else{
+        echo "Email already exits";
+      }
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+            $conn->close();
+
+
 }
-
-
-header("Location:../index.php");
-
-
-$conn->close();
 ?>
 
 
