@@ -101,6 +101,7 @@ $conn->close();
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="views/css/Style.css">
+    <script type="text/javascript" src="views/js/cardIdentifier.js"></script>
 </head>
 
 <body>
@@ -201,10 +202,10 @@ $conn->close();
         <h5 align="center">Payment</h5>
         <hr>
         <p align="center">Credit\Debit:
-            <img src="http://i45.tinypic.com/2jdqu89.jpg" alt="visa" />
-            <img src="http://i47.tinypic.com/357rfch.jpg" alt="mastercard" />
-            <img src="http://i42.tinypic.com/25tyo9l.jpg" alt="amex" />
-            <img src="http://i45.tinypic.com/2n23h9i.jpg" alt="discover" />
+            <img id="visa" src="http://i45.tinypic.com/2jdqu89.jpg" alt="visa" />
+            <img id="mastercard" src="http://i47.tinypic.com/357rfch.jpg" alt="mastercard" />
+            <img id="amex" src="http://i42.tinypic.com/25tyo9l.jpg" alt="amex" />
+            <img id="discover" src="http://i45.tinypic.com/2n23h9i.jpg" alt="discover" />
         </p>
         <form method="post">
             <div align="center" style="white-space:nowrap">
@@ -221,7 +222,7 @@ $conn->close();
             </div>
             <div align="center" style="white-space:nowrap">
                 <label for="creditCardNumber">Card Number: </label>
-                <input pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" type="text" id="creditCardNumber"
+                <input onkeyup="getCardVendor(this.value)" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" type="text" id="creditCardNumber"
                        name="creditCardNumber" placeholder="8888-8888-8888-8888" required>
             </div>
             <div align="center" style="white-space:nowrap">
