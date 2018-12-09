@@ -93,7 +93,7 @@ if (isset($_POST['room'])) {
     </center>
 </div>
 <br>
-<p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
+<p align="center"><a class="btn btn-primary clrbtn" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
 <br>
 <hr>
 <center><p>© Copyright 2018 Cruise and Park</p></center>

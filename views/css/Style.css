@@ -109,3 +109,15 @@ body {
     width: 800px;
     height: 450px;
 }
+
+.clrbtn{
+    color: white;
+    background-color: #333333;
+    width: 25%;
+    border-color: #333333;
+}
+
+.clrbtn:hover{
+    background-color: #111111;
+    color: #007bff;
+}

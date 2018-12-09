@@ -268,7 +268,7 @@ $conn->close();
     </div>
 </div>
 <br>
-<p align="center"><a class="btn btn-primary" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
+<p align="center"><a class="btn btn-primary clrbtn" href="index.php?action=clearBooking" role="button">Return To Menu</a></p>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
