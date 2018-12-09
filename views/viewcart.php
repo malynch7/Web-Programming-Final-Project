@@ -178,6 +178,7 @@ $conn->close();
                                 break;
                             case 2:
                                 echo 'VIP Lot';
+                                break;
                             case 3:
                                 echo 'None';
                         } ?></p>

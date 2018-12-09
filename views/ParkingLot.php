@@ -37,6 +37,7 @@ if (isset($_POST['Lot'])) {
         <table>
             <tr>
                 <td>
+                    <p><br></p>
                     <h4 align="center">Red Lot</h4>
                     <img src="views/images/RegularParking.jpg" alt="base" width="250" height="150">
                     <br><br>
@@ -51,6 +52,7 @@ if (isset($_POST['Lot'])) {
                     </form>
                 </td>
                 <td>
+                    <p><br></p>
                     <h4 align="center">Blue Lot</h4>
                     <img src="views/images/StandardParking.png" alt="standard" width="250" height="150">
                     <br><br>
@@ -65,6 +67,7 @@ if (isset($_POST['Lot'])) {
                     </form>
                 </td>
                 <td>
+                    <p style="color: red; font-weight: bold">Trending!</p>
                     <h4 align="center">VIP Lot</h4>
                     <img src="views/images/ValetParking.jpg" alt="standard" width="250" height="150">
                     <br><br>
