@@ -1,2 +1,4 @@
 .idea
 .metadata
+.DS_Store
+views/.DS_Store
