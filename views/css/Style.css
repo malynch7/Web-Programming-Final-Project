@@ -1,6 +1,8 @@
 body .terminal {
     background-size: cover;
-    background-size: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url('../images/canberra.jpg');
 }
 
@@ -44,8 +46,10 @@ li a:hover:not(.active) {
 body {
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-size: 100%;
+
+
+    background-repeat: no-repeat;
+    height: 100%;
     background-image: url('../images/canberra.jpg');
 }
 

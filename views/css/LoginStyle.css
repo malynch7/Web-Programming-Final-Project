@@ -1,10 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-size: 100%;
-    background-image: url('../images/canberra.jpg');
-}
+
 #mainframe{
     border: 0;
     width: 85%;

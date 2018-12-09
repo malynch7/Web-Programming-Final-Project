@@ -22,19 +22,19 @@
         <h1>Register</h1>
          <form action="views/MainRegister.php" method="post">
         <p>First Name: </p>
-        <input type="text" name="RegFirstName" id="RegFirstName">
+        <input type="text" name="RegFirstName" id="RegFirstName" required>
         <p>Last Name: </p>
-        <input type="text" name="RegLastName" id="RegLastName">
+        <input type="text" name="RegLastName" id="RegLastName" required>
         <p>Email: </p>
-        <input type="text" name="RegEmail" id="RegEmail">
+        <input type="text" name="RegEmail" id="RegEmail" required>
         <p>Password: </p>
-        <input type="password" name="RegPassword" id="RegPassword">
+        <input type="password" name="RegPassword" id="RegPassword" required>
         <p>Re-type Password: </p>
-        <input type="password" name="ReRegPassword" id="ReRegPassword">
-        <input type="submit" name="submitTwo" value="Login">
+        <input type="password" name="ReRegPassword" id="ReRegPassword" required>
+        <input type="submit" name="submitTwo" value="Register">
         </form>
-    </form>
-</div>
+     <p align="center"><a class="register" href="index.php?controller=register">Log In</a></p>
+ </div>
 <br>
 <br>
 <br>

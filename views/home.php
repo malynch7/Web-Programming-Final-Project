@@ -7,16 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="views/css/Style.css">
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            background-size:cover;
-            background-size: 100%;
-            background-image: url('views/images/canberra.jpg');
-        }
-    </style>
-
 </head>
 
 <body>
