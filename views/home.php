@@ -21,8 +21,8 @@
 <br>
 <div class="card" style="width: 22rem; margin-top: 5%">
     <div class="card-body">
-        <h3 class="card-title" align="center">Welcome</h3>
-        <hr><br><br>
+        <h3 class="card-title" align="center">Cruise and Park</h3>
+        <hr><br>
         <p align="center"><a class="btn btn-primary" href="index.php?controller=login" role="button">Log In</a></p>
         <br>
         <p align="center">Or</p>

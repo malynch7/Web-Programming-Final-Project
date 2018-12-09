@@ -27,7 +27,7 @@
 <br>
 <div class="card" style="width: 22rem; margin-top: 5%">
     <div class="card-body">
-        <h3 class="card-title" align="center">Menu</h3>
+        <h3 class="card-title" align="center">Welcome</h3>
         <hr>
         <br>
         <p align="center"><a class="btn btn-primary" href="index.php?action=startBooking" role="button">Book a New
