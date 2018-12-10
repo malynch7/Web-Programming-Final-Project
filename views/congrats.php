@@ -23,7 +23,7 @@
 </center>
 <br>
 <div class="jumbotron">
-    <center><h2>Congratulations! Your all set for your trip!</h2></center>
+    <center><h2>Congratulations! You're all set for your trip!</h2></center>
     <center><img src="views/images/congrats.gif" alt="Congrats GIF"></center>
     <p align="center">Purchase Reference Number: <?php echo $_COOKIE['purchaseNumber']; ?></p>
     <br>
